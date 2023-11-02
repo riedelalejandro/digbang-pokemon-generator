@@ -1,0 +1,6 @@
+FROM python:3.9-slim
+
+COPY ./requirements.txt /tmp/requirements.txt
+COPY ./gunicorn.conf.py /etc/gunicorn.conf.py
+
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
